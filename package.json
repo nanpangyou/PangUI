@@ -4,7 +4,9 @@
   "description": "一个基于React的组件库",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -12,7 +14,7 @@
   },
   "keywords": [],
   "author": "男胖友",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nanpangyou/PangUI/issues"
   },
@@ -26,6 +28,7 @@
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.13.5",
     "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "4",
     "ts-loader": "^8.0.17",
     "typescript": "^4.2.2",
     "webpack": "^4.29.6",

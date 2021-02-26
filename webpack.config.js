@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: {
         index: "./lib/index.tsx"
@@ -21,6 +22,14 @@ module.exports = {
                 loader: ['babel-loader', 'ts-loader']
             }
         ]
-    }
-
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'PangUI',
+            filename: 'assets/index.html'
+        })
+    ],
+    devServer: {
+        index: './assets/index.html',
+    },
 }
