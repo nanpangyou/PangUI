@@ -1,5 +1,4 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: {
         index: "./lib/index.tsx"
@@ -10,7 +9,6 @@ module.exports = {
         library: 'PangUI',
         libraryTarget: 'umd'
     },
-    mode: 'development',
     resolve: {
         extensions: [".ts", ".tsx", ".js", 'jsx']
     },
@@ -22,15 +20,5 @@ module.exports = {
                 loader: ['babel-loader', 'ts-loader']
             }
         ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'PangUI',
-            template: 'assets/index.html',
-            filename: 'index.html'
-        })
-    ],
-    devServer: {
-        index: './index.html',
     },
 }
