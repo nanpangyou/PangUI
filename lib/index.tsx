@@ -1,6 +1,6 @@
-console.log('hello webpack with typescript')
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const str: string = 'hello webpack with typescript'
-const div: HTMLElement = document.createElement('div')
-div.innerText = str
-document.body.appendChild(div)
+import Button from './button'
+
+ReactDOM.render(<Button></Button>, document.querySelector("#app"))
