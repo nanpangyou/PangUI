@@ -1,10 +1,16 @@
 import React from "react";
-import setting from "../icon-svgs/settings.svg";
-console.log(setting);
-interface Props {
+import "../icon-svgs";
+interface IIconProps {
   name: string;
 }
-const Icon: React.FunctionComponent<Props> = (props): React.ReactElement => {
-  return <span id={`${props.name}`}></span>;
+const Icon: React.FunctionComponent<IIconProps> = (
+  props
+): React.ReactElement => {
+  console.log(props);
+  return (
+    <svg fill="red">
+      <use xlinkHref={`#${props.name}`}></use>
+    </svg>
+  );
 };
 export default Icon;
