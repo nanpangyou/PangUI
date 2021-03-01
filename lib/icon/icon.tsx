@@ -8,7 +8,7 @@ const Icon: React.FunctionComponent<IIconProps> = (
 ): React.ReactElement => {
   console.log(props);
   return (
-    <svg fill="red">
+    <svg>
       <use xlinkHref={`#${props.name}`}></use>
     </svg>
   );
