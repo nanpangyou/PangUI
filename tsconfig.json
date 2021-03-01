@@ -1,17 +1,13 @@
 {
-    "compilerOptions": {
-        "outDir": "dist",
-        "jsx": "react",
-        "module": "esnext",
-        "sourceMap": true,
-        "target": "es5",
-        "rootDir": ".",
-        "lib": [
-            "es5",
-            "dom",
-            "es2015.promise"
-        ],
-        "declaration": true,
-        "allowSyntheticDefaultImports": true
-    }
+  "compilerOptions": {
+    "outDir": "dist",
+    "jsx": "react",
+    "module": "esnext",
+    "sourceMap": true,
+    "target": "es5",
+    "rootDir": ".",
+    "lib": ["es5", "dom", "es2015.promise"],
+    "declaration": true,
+    "allowSyntheticDefaultImports": true
+  }
 }
