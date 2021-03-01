@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Button from "./button";
-
-ReactDOM.render(<Button></Button>, document.querySelector("#app"));
+import App from "./app";
+ReactDOM.render(<App />, document.querySelector("#app"));
