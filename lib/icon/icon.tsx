@@ -1,6 +1,7 @@
 import React from "react";
 import "../icon-svgs";
-interface IIconProps {
+import "./icon.scss";
+interface IIconProps extends React.SVGAttributes<SVGAElement> {
   name: string;
 }
 const Icon: React.FunctionComponent<IIconProps> = (
@@ -8,7 +9,7 @@ const Icon: React.FunctionComponent<IIconProps> = (
 ): React.ReactElement => {
   console.log(props);
   return (
-    <svg>
+    <svg className="icon">
       <use xlinkHref={`#${props.name}`}></use>
     </svg>
   );
