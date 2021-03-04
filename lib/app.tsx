@@ -9,7 +9,7 @@ const App: React.FunctionComponent = (): ReactElement => {
           console.log("click");
         }}
       />
-      <Icon name="loading" />
+      <Icon name="loading" className="aaa bbb ccc" />
       <Icon name="info" />
     </div>
   );
