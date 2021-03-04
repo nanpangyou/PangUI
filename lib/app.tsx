@@ -3,9 +3,14 @@ import Icon from "./icon/icon";
 const App: React.FunctionComponent = (): ReactElement => {
   return (
     <div>
-      <Icon name="setting" />
-      <Icon name="loading" />
-      <Icon name="info" />
+      <Icon
+        name="setting"
+        onClick={() => {
+          console.log("click");
+        }}
+      />
+      <Icon name="loading" className="aaa bbb ccc" />
+      <Icon name="info" style={{ width: "5em", height: "5em", fill: "blue" }} />
     </div>
   );
 };

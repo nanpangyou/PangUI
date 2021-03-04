@@ -1,15 +1,18 @@
 import React from "react";
 import "../icon-svgs";
-interface IIconProps {
+import "./icon.scss";
+import combineClass from "../util/className";
+interface IIconProps extends React.SVGAttributes<SVGElement> {
   name: string;
 }
-const Icon: React.FunctionComponent<IIconProps> = (
-  props
-): React.ReactElement => {
-  console.log(props);
+const Icon: React.FunctionComponent<IIconProps> = ({
+  name,
+  className,
+  ...rest
+}): React.ReactElement => {
   return (
-    <svg>
-      <use xlinkHref={`#${props.name}`}></use>
+    <svg className={combineClass("pang-icon", className)} {...rest}>
+      <use xlinkHref={`#${name}`}></use>
     </svg>
   );
 };
