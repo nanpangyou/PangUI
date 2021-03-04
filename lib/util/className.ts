@@ -1,9 +1,4 @@
-const combineClass = (current: string = "", props: string = ""): string => {
-  const currentArr: Array<string> = current.split(" ");
-  const propsArr: Array<string> = props.split(" ");
-  return currentArr
-    .concat(propsArr)
-    .filter((i) => Boolean(i))
-    .join(" ");
+const combineClass = (...classes: (string | undefined)[]): string => {
+  return classes.filter((i) => Boolean(i)).join(" ");
 };
 export default combineClass;

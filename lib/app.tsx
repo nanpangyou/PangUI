@@ -10,7 +10,7 @@ const App: React.FunctionComponent = (): ReactElement => {
         }}
       />
       <Icon name="loading" className="aaa bbb ccc" />
-      <Icon name="info" />
+      <Icon name="info" style={{ width: "5em", height: "5em", fill: "blue" }} />
     </div>
   );
 };
