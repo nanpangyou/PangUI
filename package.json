@@ -5,7 +5,8 @@
   "main": "dist/lib/bundle.js",
   "types": "dist/lib/index",
   "scripts": {
-    "test": "cross-env NODE_ENE=test jest --config=jest.config.js --runInBand",
+    "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
+    "ci": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "dev:build": "cross-env NODE_ENV=development webpack --config webpack.config.dev.js"
@@ -23,8 +24,8 @@
   "homepage": "https://github.com/nanpangyou/PangUI#readme",
   "dependencies": {
     "core-js": "^3.9.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.0",
@@ -33,6 +34,7 @@
     "@babel/preset-env": "^7.13.8",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.20",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
@@ -45,8 +47,10 @@
     "cross-env": "^7.0.3",
     "css-loader": "^5.1.1",
     "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "html-webpack-plugin": "4",
     "jest": "^26.6.3",
+    "jest-junit": "^12.0.0",
     "react-test-renderer": "^17.0.1",
     "sass": "^1.32.8",
     "sass-loader": "^9.0.1",
