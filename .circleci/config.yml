@@ -66,9 +66,12 @@ workflows:
       - publish:
           requires:
             - build
+              # publish 就只会在分支名带有 deploy 的时候执行。提交代码后，把 master 分支推送到 deploy 分支即可完成部署，代码如下：
+              # git commit . -m "deploy"
+              # git push origin master:deploy
              branches:
              only: /deploy/
-          # 按照tag来区分是否publish，但是circleci检测不到tag变化
+          # 按照tag来区分是否publish，但是circleci检测不到tag变化 故先注释
           # filters:
           #   tags:
           #     only: /^v[0-9]+(\.[0-9]+)*/
