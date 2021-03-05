@@ -69,14 +69,14 @@ workflows:
       - publish:
           requires:
             - build
-          # filters:
-          #   branches:
-          #     only: /deploy/
+          filters:
+            branches:
+              only: /deploy/
       
               
           # 按照tag来区分是否publish，但是circleci检测不到tag变化 故先注释
-          filters:
-            tags:
-              only: /^v[0-9]+(\.[0-9]+)*/
-            branches:
-              ignore: /.*/
+          # filters:
+          #   tags:
+          #     only: /^v[0-9]+(\.[0-9]+)*/
+          #   branches:
+          #     ignore: /.*/
