@@ -4,23 +4,7 @@ module.exports = {
   verbose: true,
   clearMocks: false,
   //=====测试相关的
-  collectCoverage: true,
-  collectCoverageFrom: [
-    "lib/**/*.{ts,tsx}",
-    "!**/node_modules/**",
-    "!lib/icon-svgs/*",
-    "!lib/app.tsx",
-    "!lib/index.tsx"
-  ],
-  coverageDirectory: "coverage",
-  coverageReporters: ["text", "lcov"],
-  reporters: [
-    "default",
-    [
-      "jest-junit",
-      { outputDirectory: "test_reports/jest", outputName: "results.xml" }
-    ]
-  ],
+  collectCoverage: false,
   // ====
   moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
   moduleNameMapper: {
