@@ -3,8 +3,25 @@
 module.exports = {
   verbose: true,
   clearMocks: false,
-  collectCoverage: false,
-  reporters: ["default"],
+  //=====测试相关的
+  collectCoverage: true,
+  collectCoverageFrom: [
+    "lib/**/*.{ts,tsx}",
+    "!**/node_modules/**",
+    "!lib/icon-svgs/*",
+    "!lib/app.tsx",
+    "!lib/index.tsx"
+  ],
+  coverageDirectory: "coverage",
+  coverageReporters: ["text", "lcov"],
+  reporters: [
+    "default",
+    [
+      "jest-junit",
+      { outputDirectory: "test_reports/jest", outputName: "results.xml" }
+    ]
+  ],
+  // ====
   moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
   moduleNameMapper: {
     //https://www.jianshu.com/p/5d11cd50ead4   --jest配置

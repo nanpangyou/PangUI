@@ -5,7 +5,7 @@
   "main": "dist/lib/bundle.js",
   "types": "dist/lib/index",
   "scripts": {
-    "test": "cross-env NODE_ENE=test jest --config=jest.config.js --runInBand",
+    "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "dev:build": "cross-env NODE_ENV=development webpack --config webpack.config.dev.js"
@@ -49,6 +49,7 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "html-webpack-plugin": "4",
     "jest": "^26.6.3",
+    "jest-junit": "^12.0.0",
     "react-test-renderer": "^17.0.1",
     "sass": "^1.32.8",
     "sass-loader": "^9.0.1",

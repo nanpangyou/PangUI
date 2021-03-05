@@ -5,5 +5,5 @@ try {
   const all = importAll(require.context("./", true, /\.svg$/));
   module.exports = all;
 } catch (err) {
-  console.log(err);
+  // console.log(err);
 }
