@@ -1,6 +1,6 @@
 {
   "name": "pangui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "一个基于React的组件库",
   "main": "dist/lib/bundle.js",
   "types": "dist/lib/index",
@@ -11,6 +11,9 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "dev:build": "cross-env NODE_ENV=development webpack --config webpack.config.dev.js"
   },
+  "files": [
+    "/dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nanpangyou/PangUI.git"
