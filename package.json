@@ -26,9 +26,11 @@
   },
   "homepage": "https://github.com/nanpangyou/PangUI#readme",
   "dependencies": {
+    "@types/react-router-dom": "^5.1.7",
     "core-js": "^3.9.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.0",
