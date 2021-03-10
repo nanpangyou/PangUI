@@ -1,4 +1,5 @@
 import "./lib/main.scss";
+import "./example.scss";
 import React, { Fragment } from "react";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ReactDOM from "react-dom";
@@ -46,22 +47,24 @@ function App(): React.ReactElement {
     <Fragment>
       <header>PangUI</header>
       <Router>
-        <aside>
-          <ul>
-            <li>
-              <Link to="/icon">icon</Link>
-            </li>
-          </ul>
-        </aside>
-        <main>
-          <Switch>
-            {routes.map((route, i) => (
-              <RouteWithSubRoutes key={i} {...route} />
-            ))}
-            {/* <Icon name="loading" />
+        <article>
+          <aside>
+            <ul>
+              <li>
+                <Link to="/icon">icon</Link>
+              </li>
+            </ul>
+          </aside>
+          <main>
+            <Switch>
+              {routes.map((route, i) => (
+                <RouteWithSubRoutes key={i} {...route} />
+              ))}
+              {/* <Icon name="loading" />
           <DialogDemo></DialogDemo> */}
-          </Switch>
-        </main>
+            </Switch>
+          </main>
+        </article>
       </Router>
       <footer>developed by nanpangyou</footer>
     </Fragment>
