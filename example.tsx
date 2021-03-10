@@ -4,15 +4,16 @@ import React, { Fragment } from "react";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 import IconDemo from "./lib/icon/icon-demo";
+import ButtonDemo from "./lib/button/button-demo";
 import DialogDemo from "./lib/dialog/dialog-demo";
-interface IRoutes {
-  path: string;
-  component: React.FunctionComponent;
-}
 const routes = [
   {
     path: "/icon",
     component: IconDemo
+  },
+  {
+    path: "/button",
+    component: ButtonDemo
   }
   // {
   //   path: "/tacos",
@@ -52,6 +53,9 @@ function App(): React.ReactElement {
             <ul>
               <li>
                 <Link to="/icon">icon</Link>
+              </li>
+              <li>
+                <Link to="/button">button</Link>
               </li>
             </ul>
           </aside>
