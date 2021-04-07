@@ -70,7 +70,7 @@ function App(): React.ReactElement {
           </main>
         </article>
       </Router>
-      <footer>developed by nanpangyou</footer>
+      <footer>Developed by nanpangyou</footer>
     </Fragment>
   );
 }
