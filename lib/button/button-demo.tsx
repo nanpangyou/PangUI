@@ -4,6 +4,9 @@ const ButtonDemo: React.FunctionComponent = (): React.ReactElement => {
   const fn = () => {
     console.log(12);
   };
+  const focusFn = (): void => {
+    console.log("focus");
+  };
   return (
     <div
       style={{
@@ -17,7 +20,9 @@ const ButtonDemo: React.FunctionComponent = (): React.ReactElement => {
       <Button type="primary" onClick={fn}>
         Button
       </Button>
-      <Button type="dashed">Button</Button>
+      <Button type="dashed" onFocus={focusFn}>
+        Button
+      </Button>
       <Button type="danger">Button</Button>
     </div>
   );

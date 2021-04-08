@@ -2,6 +2,7 @@ import React from "react";
 import classes from "../util/className";
 import "./button.scss";
 interface IProps {
+  name?: string;
   type?: "default" | "primary" | "dashed" | "danger";
   htmlType?: "button" | "submit" | "reset";
   onClick?: React.MouseEventHandler;
@@ -10,7 +11,6 @@ interface IProps {
   onFocus?: React.FocusEventHandler;
 }
 const Button: React.FC<IProps> = (props): React.ReactElement => {
-  console.log(props);
   const { children, type, htmlType, ...restProps } = props;
   return (
     <button
@@ -23,6 +23,7 @@ const Button: React.FC<IProps> = (props): React.ReactElement => {
   );
 };
 Button.defaultProps = {
+  name: "Pang-Button",
   type: "default",
   htmlType: "button"
 };

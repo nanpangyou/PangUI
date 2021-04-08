@@ -7,12 +7,13 @@
   outline: none;
   color: #333;
   box-shadow: 0.3px 0.3px 5px #aaa;
-  &:active {
-    border: 2px solid red;
-  }
   &.default {
     background: #fff;
     color: #333;
+    &:active {
+      background: #eee;
+      border-color: $main-color;
+    }
     &:hover {
       color: $main-color;
       border: 1.2px solid $main-color;
@@ -22,14 +23,19 @@
     background: $main-color;
     border: 1.2px solid $main-color;
     color: #fff;
-    &:hover {
+    &:active {
       background: $main-color-light;
+    }
+    &:hover {
       border-color: $main-color-light;
     }
   }
   &.dashed {
     background: #fff;
     border: 1.2px dashed #333;
+    &:active {
+      background: #eee;
+    }
     &:hover {
       color: $main-color;
       border: 1.2px dashed $main-color;
@@ -39,8 +45,10 @@
     background: $danger-color;
     border: 1.2px solid $danger-color;
     color: #fff;
-    &:hover {
+    &:active {
       background: $danger-color-light;
+    }
+    &:hover {
       border-color: $danger-color-light;
     }
   }
